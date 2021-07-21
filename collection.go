@@ -80,9 +80,7 @@ func (s *intCollection) ToJSONString() (string, error) {
 }
 
 func (s *intCollection) Add(members ...int) {
-	for _, v := range members {
-		s.members = append(s.members, v)
-	}
+	s.members = append(s.members, members...)
 }
 
 func (s *intCollection) Members() []int {
@@ -142,9 +140,7 @@ func (s *int64Collection) ToJSONString() (string, error) {
 }
 
 func (s *int64Collection) Add(members ...int64) {
-	for _, v := range members {
-		s.members = append(s.members, v)
-	}
+	s.members = append(s.members, members...)
 }
 
 func (s *int64Collection) Members() []int64 {
@@ -194,9 +190,7 @@ func (s *stringCollection) ToJSONString() (string, error) {
 }
 
 func (s *stringCollection) Add(members ...string) {
-	for _, v := range members {
-		s.members = append(s.members, v)
-	}
+	s.members = append(s.members, members...)
 }
 
 func (s *stringCollection) Members() []string {
